@@ -10,7 +10,6 @@ import (
 	"github.com/firmanJS/go-bot-telegram/models"
 )
 
-// This function is called whenever an update is recieved
 func WebHookHandler(rw http.ResponseWriter, req *http.Request) {
 	// Create our web hook request body type instance
 	body := &models.WebHookReqBody{}
