@@ -8,8 +8,14 @@
 ```sh
 cp .env-sample .env
 ```
-* fill the TELEGRAM_TOKEN your bot token
+* fill the TELEGRAM_TOKEN your bot token in `.env`
 
+## RUNNING WEBHOOK
+* using `localhost.run`
+* in your terminal
+```sh
+ssh -R 80:localhost:8080 ssh.localhost.run
+```
 ## RUN APP
 
 ```go
