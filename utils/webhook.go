@@ -25,11 +25,11 @@ func WebHookHandler(rw http.ResponseWriter, req *http.Request) {
 
 	action := strings.ToLower(body.Message.Text)
 	chatId := body.Message.Chat.ID
-
-	SendingReply(chatId, action)
+	msgId := body.Message.Message_id
+	SendingReply(chatId, msgId, action)
 }
 
-func SendingReply(chatID int64, command string) error {
+func SendingReply(chatID int, msgId int, command string) error {
 	//get message in request command
 	msg := RequestCommand(command)
 
@@ -45,7 +45,7 @@ func SendingReply(chatID int64, command string) error {
 		return err
 	}
 
-	RequestApiTelegram(reqBytes)
+	RequestApiTelegram(reqBytes, chatID, msgId)
 
 	return err
 
