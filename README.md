@@ -1,4 +1,4 @@
-### GO BOT TELEGRAM
+# GO BOT TELEGRAM
 
 ## Create your bot token
 * create telegram bot search in your telegram `BotFather` and typing `/newbot` and enter
