@@ -9,7 +9,9 @@ import (
 
 func RequestApiTelegram(reqBytes []byte, chatID int, msgId int) error {
 	// Make a request to send our message using the POST method to the telegram bot API
-	oriApi := Config("TELEGRAM_API") + Config("TELEGRAM_TOKEN") + "/" + "sendMessage?chat_id="
+	api := Config("TELEGRAM_API")
+	token := Config("TELEGRAM_TOKEN")
+	oriApi := api + token + "/" + "sendMessage?chat_id="
 	concat := fmt.Sprintf("%s%d", oriApi, chatID)
 	// reply message
 	apiUrls := concat + "&reply_to_message_id="
