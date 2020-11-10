@@ -22,7 +22,11 @@ go run server.go
 ```sh
 ssh -R 80:localhost:8080 ssh.localhost.run
 ```
-after your running ssh yout have tunnel url ex `root-fa5d3df2.localhost.run`
+after your running ssh yout have tunnel url 
+ex `root-fa5d3df2.localhost.run`
 
 running curl
-`curl -F "url=your-tunnel-localhost.run" https://api.telegram.org/botYOUR_BOT_TOKEN_HERE/setWebhook`
+
+```sh
+curl -F "url=your-tunnel-localhost.run" https://api.telegram.org/botYOUR_BOT_TOKEN_HERE/setWebhook
+```
